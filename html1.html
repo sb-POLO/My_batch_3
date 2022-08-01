@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>NEWTON SCHOOL</h1>
+    <div>
+        <h3>section</h3>
+        <p onclick="display(event)">sameera</p>
+        <p onclick="display(event)">muskan</p>
+        <p onclick="display(event)">prachi</p>
+    </div>
+    <img src="" ></img>
+    <div>
+        <h3>section</h3>
+        <p onclick="display(event)">sourav</p>
+        <p onclick="display(event)">ayush</p>
+        <p onclick="display(event)">jamim</p>
+    </div>
+    <div>
+        <h3>section</h3>
+        <p onclick="display(event)">rishi</p>
+        <p onclick="display(event)">amir</p>
+        <p onclick="display(event)">tarun</p>
+    </div>
+    <div id="selected">Selected name: </div>
+    <script>
+        function display(e) {
+            let selected = document.getElementById("selected");
+            selected.innerText = "selected name " + e.target.innerText;
+        }
+    </script>
+</body>
+
+</html>
