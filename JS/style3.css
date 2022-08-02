@@ -1,0 +1,19 @@
+#jsrender {
+    width: 300px;
+    height: 200px;
+    border: 3px solid black;
+    text-align: center;
+}
+
+#reactrender{
+    width: 300px;
+    height: 200px;
+    border: 3px solid black;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
