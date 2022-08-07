@@ -42,8 +42,7 @@ function App() {
 
   return (
     <>
-      <Selector></Selector>
-      <Ref></Ref>
+      
     </>
   )
 

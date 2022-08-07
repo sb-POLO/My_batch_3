@@ -4,8 +4,8 @@ function MyCounter() {
     const [count, setCount] = useState(1);
 
     useEffect(() => {
-        res = count * 4;
-        console.log("res = ", res);
+        // res = count * 4;
+        console.log("MyCounter updated");
     }, [count]) //update
 
     useEffect(() => {
@@ -16,9 +16,9 @@ function MyCounter() {
         } // unmountconsole.log("res = ", res)
     }, [])//window.onload(),  mount
 
-    useEffect(() => {
-        console.log("I am called");
-    }) //mix state ==> mount + update
+    // useEffect(() => {
+    //     console.log("I am called");
+    // }) //mix state ==> mount + update
 
     return (
         <div>
