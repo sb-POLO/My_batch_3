@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
 
-      {/* <Reducer /> */}
-      <Header key="abc" arr={myarray} />
+      <Reducer />
+      {/* <Header key="abc" arr={myarray} /> */}
 
     </div>
   );

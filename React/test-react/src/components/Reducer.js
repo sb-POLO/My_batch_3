@@ -1,4 +1,6 @@
-import React, { useReducer } from 'react'
+import React, { useReducer, useState } from 'react'
+import { reducerState } from '../reducer/reducerState'
+import { SOURAV, PRACHI, DOIT } from "../action.type";
 
 function mycounter(counter, action) {
     //2nd param ===> object;
@@ -29,10 +31,18 @@ function mycounter(counter, action) {
 
 }
 
+
+
+
 function Reducer() {
-    const [counter, dispatch] = useReducer(mycounter, 0);
-    let obj = { sam: "INCREMENT" };
-    let obj1 = { sam: "DECREMENT" };
+    // const [counter, dispatch] = useReducer(mycounter, 0);
+    // const [data, setData] = useState("");
+    const [state, dispatchState] = useReducer(reducerState, {
+        data1: "",
+        data2: ""
+    });
+    // let obj = { sam: "INCREMENT" };
+    // let obj1 = { sam: "DECREMENT" };
 
     // variable name, dispatcher function
     // state, setState==== useState(0);
@@ -50,9 +60,23 @@ function Reducer() {
 
     return (
         <>
-            <div>{counter}</div>
-            <button onClick={() => dispatch(obj)}>INCREMENT</button>
-            <button onClick={() => dispatch({ type: "IDONTKNOW" })}>DECREMENT</button>
+            {/* <div>{counter}</div> */}
+            <div>{state.data1}</div>
+            <div>{state.data2}</div>
+            {/* <button onClick={() => dispatch({ type: "INCREMENT" })}>INCREMENT</button>
+            <button onClick={() => dispatch({ type: "DECREMENT" })}>DECREMENT</button> */}
+            <input name="data1" onChange={(e) => dispatchState({
+                type: SOURAV, payload: {
+                    val: e.target.value,
+                    name: "data1"
+                }
+            })} value={state.data1}></input>
+            <input name="data2" onChange={(e) => dispatchState({
+                type: SOURAV, payload: {
+                    val: e.target.value,
+                    name: "data2"
+                }
+            })} value={state.data2}></input>
         </>
     )
 }
