@@ -71,3 +71,16 @@ ul {
 .components {
   font-size: 30px;
 }
+
+button {
+  width: 200px;
+  height: 80px;
+  border: 2px solid black;
+  font-size: 30px;
+}
+
+img {
+  border: 2px solid black;
+  width: 500px;
+  height: 300px;
+}

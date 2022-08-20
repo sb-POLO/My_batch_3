@@ -4,7 +4,7 @@ import { useState } from 'react';
 import ContactUs from './components/ContactUs';
 import Home from './components/Home';
 import About from './components/About';
-import { Link, Route, Routes } from 'react-router-dom'
+import { Link, Route, Routes, useSearchParams } from 'react-router-dom'
 import NotFound from './components/NotFound';
 
 function App() {

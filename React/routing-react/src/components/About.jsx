@@ -1,10 +1,30 @@
 import React from 'react'
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import sourav from '../assets/sourav.png';
+import sameera from '../assets/sameera.png';
+import prachi from '../assets/prachi.png';
 
 function About() {
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [image, setImage] = useState("");
+
+    useEffect(() => {
+        searchParams.get('user') === "sourav" ? setImage(sourav) : searchParams.get("user") === "sameera" ? setImage(sameera) : searchParams.get('user') === "prachi" ? setImage(prachi) : setImage(null);
+    }, [searchParams])
+
+    // console.log(searchParams.get('color'));
     return (
         <>
             <div className='components'>About</div>
-            <img src='https://media.istockphoto.com/photos/about-web-banner-the-word-about-built-from-letters-on-wooden-cubes-picture-id1335204621?b=1&k=20&m=1335204621&s=170667a&w=0&h=4Ttl3LHvYqyEGYLXEMDqyAY7CV8zhR2SlVS3f_W3SFw='></img>
+
+            <button onClick={() => setSearchParams({ user: "sameera" })}>Sameera</button>
+            <button onClick={() => setSearchParams({ user: "sourav" })}>Sourav</button>
+            <button onClick={() => setSearchParams({ user: "prachi" })}>Prachi</button>
+            <br></br>
+            <br></br>
+            <img src={image}></img>
         </>
     )
 }
