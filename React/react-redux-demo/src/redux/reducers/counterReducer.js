@@ -8,16 +8,16 @@ const counterReducer = (state = initialState, action) => {
     switch (action.type) {
         case "INCREMENT":
             return {
-                ...state,counter: state.counter + 1
+                ...state, counter: state.counter + 1
             }
         case "DECREMENT":
             return {
-                ...state,counter: state.counter - 1
+                ...state, counter: state.counter - 1
             }
         case "CHANGEINPUT":
             return {
-                    ...state,input:action.payload
-                }
+                ...state, input: action.payload
+            }
         default:
             return state
     }
